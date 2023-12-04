@@ -22,7 +22,7 @@ public class ConselorAuthSteps {
     }
     @When("saya mengirimkan request login konselor dengan memasukan email dan password valid")
     public void mengirimkanRequestLoginKonselorDenganMemasukanEmailDanPasswordValid() {
-        conselor_auth.mengirimkanRequestLoginKonselorDenganMemasukanEmailDanPasswordValid();
+        conselor_auth.mengirimkanRequestLoginKonselorDenganMemasukanEmailDanPasswordValid("agung123@gmail.com","agung123");
     }
     @When("saya mengirimkan request login konselor dengan memasukan email dan password invalid")
     public void mengirimkanRequestLoginkonselorDenganMemasukanEmailDanPasswordInvalid(){

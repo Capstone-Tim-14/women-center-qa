@@ -15,12 +15,11 @@ public class GenerateToken {
         ResponseBody loginResponse = SerenityRest.given()
                 .header("Content-Type", "application/json")
                 .body(requestBody.toString())
-                .post("api-ferminacare.tech/api/v1/admin/auth")
+                .post("https://api-ferminacare.tech/api/v1/admin/auth")
                 .body();
 
         JSONObject loginResponseBody = new JSONObject(loginResponse.asString());
-
-        return loginResponseBody.get("data").toString();
+        return loginResponseBody.getJSONObject("data").get("token").toString();
     }
     public static String generateTokenKonselor() {
         JSONObject userData = FileUtils.getUserAdmin();
@@ -36,7 +35,6 @@ public class GenerateToken {
                 .body();
 
         JSONObject loginResponseBody = new JSONObject(loginResponse.asString());
-
-        return loginResponseBody.get("data").toString();
+        return loginResponseBody.getJSONObject("data").get("token").toString();
     }
 }

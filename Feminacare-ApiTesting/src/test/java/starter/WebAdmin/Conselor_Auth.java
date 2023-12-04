@@ -15,10 +15,10 @@ public class Conselor_Auth {
         return url + "/Auth";
     }
     @Step("saya mengirimkan request login konselor dengan memasukan email dan password valid")
-    public void mengirimkanRequestLoginKonselorDenganMemasukanEmailDanPasswordValid(){
+    public void mengirimkanRequestLoginKonselorDenganMemasukanEmailDanPasswordValid(String email, String password){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email","counselorB@gmail.com");
-        requestBody.put("password","counselorB123");
+        requestBody.put("email",email);
+        requestBody.put("password",password);
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())

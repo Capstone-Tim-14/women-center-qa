@@ -56,4 +56,9 @@ public class CreateTagArticleSteps {
     public void mengirimkanRequestUntukMembuatTagBaruDenganmethodDELETE(){
         createTagArticle.mengirimkanRequestUntukMembuatTagBaruDenganmethodDELETE();
     }
+
+    @And("menampilkan pesan sukses membuat kategori")
+    public void menampilkanPesanSuksesMembuatKategori() {
+        createTagArticle.menampilkanPesanSuksesMembuatKategori();
+    }
 }

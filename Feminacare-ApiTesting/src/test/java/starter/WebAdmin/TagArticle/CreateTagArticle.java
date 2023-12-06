@@ -1,9 +1,13 @@
 package starter.WebAdmin.TagArticle;
 
+import io.cucumber.java.en.And;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import org.json.JSONObject;
 import starter.utils.GenerateToken;
+
+import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class CreateTagArticle {
     private String url = "https://api-ferminacare.tech/api/v1/admin";
@@ -25,7 +29,11 @@ public class CreateTagArticle {
                 .body(requestBody.toString())
                 .post(menetapkanApiEndpointUntukMembuatTagBaru());
     }
-
+    @Step("menampilkan pesan sukses membuat kategori")
+    public void menampilkanPesanSuksesMembuatKategori() {
+        restAssuredThat(response->response.body("status",equalTo(201)));
+        restAssuredThat(response->response.body("message",equalTo("Success created category")));
+    }
     @Step("saya mengirimkan request untuk membuat tag baru dengan mengisi sebagian data")
     public void mengirimkanRequestUntukMembuatTagBaruDenganMengisiSebagianData() {
         JSONObject requestBody = new JSONObject();

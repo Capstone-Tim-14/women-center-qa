@@ -1,9 +1,16 @@
-package starter.stepdefinitions.WebAdmin;
+package starter.stepdefinitions.WebAdmin.Role;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
 import starter.WebAdmin.Roles.CreateRole;
+import starter.utils.JsonSchema;
+import starter.utils.JsonSchemaHelper;
+
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
+import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
+import static org.hamcrest.Matchers.notNullValue;
 
 public class CreateRoleSteps {
 
@@ -23,7 +30,10 @@ public class CreateRoleSteps {
     public void mengirimkanRequestUntukMmebuatRoleBaruDenganMengosongkanDataRole(){
         createRole.mengirimkanRequestUntukMembuatRoleBaruDenganMengosongkanDataRole();
     }
-
+    @And("saya menerima data role yang berhasil ditambahkan")
+    public void sayaMenerimaDataRoleYangBerhasilDitambahkan() {
+        createRole.sayaMenerimaDataRoleYangBerhasilDitambahkan();
+    }
     @Given("saya menetapkan Api endpoint yang salah untuk membuat role baru")
     public void menetapkanApiEndpointYangSalahUntukMembuatRoleBaru(){
         createRole.menetapkanApiEndpointYangSalahUntukMembuatRoleBaru();
@@ -45,14 +55,8 @@ public class CreateRoleSteps {
     public void mengirimkanRequestUntukMembuatRoleBaruDenganMethodDelete(){
         createRole.mengirimkanRequestUntukMembuatRoleBaruDenganMethodDelete();
     }
-
-    @And("saya menerima data role yang berhasil ditambahkan")
-    public void sayaMenerimaDataRoleYangBerhasilDitambahkan() {
-
-    }
-
     @When("saya mengirimkan request untuk membuat role baru tanpa menyisipkan dan token")
     public void sayaMengirimkanRequestUntukMembuatRoleBaruTanpaMenyisipkanDanToken() {
-
+        createRole.sayaMengirimkanRequestUntukMembuatRoleBaruTanpaMenyisipkanDanToken();
     }
 }

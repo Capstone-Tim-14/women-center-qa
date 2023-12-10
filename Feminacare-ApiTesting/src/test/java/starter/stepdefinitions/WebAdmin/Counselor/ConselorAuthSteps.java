@@ -1,4 +1,4 @@
-package starter.stepdefinitions.WebAdmin;
+package starter.stepdefinitions.WebAdmin.Counselor;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;

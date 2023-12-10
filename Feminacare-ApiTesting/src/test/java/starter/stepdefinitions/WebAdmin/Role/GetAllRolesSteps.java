@@ -1,4 +1,4 @@
-package starter.stepdefinitions.WebAdmin;
+package starter.stepdefinitions.WebAdmin.Role;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

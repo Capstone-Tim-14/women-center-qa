@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome",
+  "definitions": {
+    "Welcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "title": "Welcome"
+    },
+    "Data": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title_job": {
+          "type": "string"
+        },
+        "logo": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ]
+        },
+        "company_name": {
+          "type": "string"
+        },
+        "published_at": {
+          "type": "string"
+        },
+        "cover": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ]
+        },
+        "linkedin_url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ]
+        },
+        "location": {
+          "type": "string"
+        },
+        "about_job": {
+          "type": "string"
+        },
+        "about_company": {
+          "type": "string"
+        },
+        "required_skill": {
+          "type": "string"
+        },
+        "company_industry": {
+          "type": "string"
+        },
+        "size_company_employee": {
+          "type": "integer"
+        },
+        "job_type": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/JobType"
+          }
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "about_company",
+        "about_job",
+        "company_industry",
+        "company_name",
+        "cover",
+        "created_at",
+        "job_type",
+        "linkedin_url",
+        "location",
+        "logo",
+        "published_at",
+        "required_skill",
+        "size_company_employee",
+        "title_job",
+        "updated_at"
+      ],
+      "title": "Data"
+    },
+    "JobType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "name"
+      ],
+      "title": "JobType"
+    }
+  }
+}

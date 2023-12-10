@@ -1,7 +1,5 @@
 package starter.WebAdmin.Roles;
-
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.When;
+import static org.hamcrest.Matchers.notNullValue;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import org.json.JSONObject;
@@ -35,6 +33,7 @@ public class CreateRole {
     public void sayaMenerimaDataRoleYangBerhasilDitambahkan() {
         JsonSchemaHelper helper = new JsonSchemaHelper();
         String schema = helper.getResponseSchema(JsonSchema.DATA_BARU_ROLE_SCHEMA);
+        restAssuredThat(response -> response.body("data.name", notNullValue()));
         restAssuredThat(response -> response.body(matchesJsonSchema(schema)));
     }
 

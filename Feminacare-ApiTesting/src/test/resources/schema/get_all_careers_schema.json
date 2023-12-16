@@ -34,7 +34,7 @@
           "type": "integer"
         },
         "title_job": {
-          "type": "string"
+          "$ref": "#/definitions/TitleJob"
         },
         "logo": {
           "type": "string",
@@ -44,13 +44,17 @@
           ]
         },
         "company_name": {
-          "type": "string"
+          "$ref": "#/definitions/CompanyName"
         },
         "published_at": {
           "type": "string"
         },
         "location": {
-          "type": "string"
+          "$ref": "#/definitions/Location"
+        },
+        "recomendation": {
+          "type": "string",
+          "format": "boolean"
         }
       },
       "required": [
@@ -59,9 +63,37 @@
         "location",
         "logo",
         "published_at",
+        "recomendation",
         "title_job"
       ],
       "title": "Datum"
+    },
+    "CompanyName": {
+      "type": "string",
+      "enum": [
+        "Gojek",
+        "Hilton",
+        "Google"
+      ],
+      "title": "CompanyName"
+    },
+    "Location": {
+      "type": "string",
+      "enum": [
+        "Jakarta, Indonesia",
+        "Bali",
+        "yogyakarta"
+      ],
+      "title": "Location"
+    },
+    "TitleJob": {
+      "type": "string",
+      "enum": [
+        "Backend Engineer (Golang)- Middle/Senior",
+        "Front Office Supervisor",
+        "Quality Engineer"
+      ],
+      "title": "TitleJob"
     }
   }
 }

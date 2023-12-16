@@ -52,6 +52,9 @@
             ".jpg"
           ]
         },
+        "education": {
+          "type": "string"
+        },
         "description": {
           "type": "string"
         },

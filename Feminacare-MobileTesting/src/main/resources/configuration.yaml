@@ -1,0 +1,6 @@
+appiumProperties:
+  platformName: Android
+  deviceName: device
+  app: D:\Download\login_register.apk
+  automationName: UIAutomator2
+  autoGrantPermissions: true

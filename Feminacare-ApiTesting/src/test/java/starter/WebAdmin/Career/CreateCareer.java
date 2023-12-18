@@ -58,6 +58,14 @@ public class CreateCareer {
         requestBody.put("company_name", "Google");
         requestBody.put("location", "yogyakarta");
         requestBody.put("size_company_employee", "1000");
+<<<<<<< HEAD
+=======
+        requestBody.put("company_industry", "software development");
+        requestBody.put("required_skill", "programming languages");
+        requestBody.put("linkedin_url", "https://www.linkedin.com/company/google/job");
+        requestBody.put("about_job", "Create test case");
+        requestBody.put("about_company", "Lorem Ipsum");
+>>>>>>> 0d7cd88337049558e92133e24a3da83e79ce9364
         SerenityRest.given()
                 .contentType(ContentType.MULTIPART) // set to multipart/form-data
                 .header("Authorization", "Bearer " + token)
@@ -76,10 +84,24 @@ public class CreateCareer {
 
     @Step("saya mengirimkan request untuk membuat karir tanpa menggunakan token")
     public void mengirimkanRequestTanpaToken() {
+<<<<<<< HEAD
+=======
+        JSONObject requestBody = new JSONObject();
+        requestBody.put("title_job", "Quality Engineer");
+        requestBody.put("company_name", "Google");
+        requestBody.put("location", "yogyakarta");
+        requestBody.put("size_company_employee", "1000");
+        requestBody.put("company_industry", "software development");
+        requestBody.put("required_skill", "programming languages");
+        requestBody.put("linkedin_url", "https://www.linkedin.com/company/google/job");
+        requestBody.put("about_job", "Create test case");
+        requestBody.put("about_company", "Lorem Ipsum");
+>>>>>>> 0d7cd88337049558e92133e24a3da83e79ce9364
         SerenityRest.given()
                 .contentType(ContentType.MULTIPART) // set to multipart/form-data
                 .multiPart("logo", new File("src/test/resources/Image/QA.jpeg"))
                 .multiPart("cover", new File("src/test/resources/Image/cover.jpeg"))
+<<<<<<< HEAD
                 .multiPart("title_job", "Quality Engineer")
                 .multiPart("company_name", "Google")
                 .multiPart("location", "yogyakarta")
@@ -89,6 +111,8 @@ public class CreateCareer {
                 .multiPart("linkedin_url", "https://www.linkedin.com/company/google/job")
                 .multiPart("about_job", "Create test case")
                 .multiPart("about_company", "Lorem Ipsum")
+=======
+>>>>>>> 0d7cd88337049558e92133e24a3da83e79ce9364
                 .post(menetapkanApiEndpointUntukMembuatKarirBaru());
     }
 
@@ -115,11 +139,24 @@ public class CreateCareer {
     @Step("saya mengirimkan request untuk membuat karir dengan menggunakan method Get")
     public void mengirimkanRequestDenganMethodGet() {
         String token = GenerateToken.generateTokenAdmin();
+<<<<<<< HEAD
+=======
+        requestBody.put("title_job", "Quality Engineer");
+        requestBody.put("company_name", "Google");
+        requestBody.put("location", "yogyakarta");
+        requestBody.put("size_company_employee", "1000");
+        requestBody.put("company_industry", "software development");
+        requestBody.put("required_skill", "programming languages");
+        requestBody.put("linkedin_url", "https://www.linkedin.com/company/google/job");
+        requestBody.put("about_job", "Create test case");
+        requestBody.put("about_company", "Lorem Ipsum");
+>>>>>>> 0d7cd88337049558e92133e24a3da83e79ce9364
         SerenityRest.given()
                 .contentType(ContentType.MULTIPART) // set to multipart/form-data
                 .header("Authorization", "Bearer " + token)
                 .multiPart("logo", new File("src/test/resources/Image/QA.jpeg"))
                 .multiPart("cover", new File("src/test/resources/Image/cover.jpeg"))
+<<<<<<< HEAD
                 .multiPart("title_job", "Quality Engineer")
                 .multiPart("company_name", "Google")
                 .multiPart("location", "yogyakarta")
@@ -129,6 +166,8 @@ public class CreateCareer {
                 .multiPart("linkedin_url", "https://www.linkedin.com/company/google/job")
                 .multiPart("about_job", "Create test case")
                 .multiPart("about_company", "Lorem Ipsum")
+=======
+>>>>>>> 0d7cd88337049558e92133e24a3da83e79ce9364
                 .get(menetapkanApiEndpointUntukMembuatKarirBaru());
     }
 
@@ -155,11 +194,24 @@ public class CreateCareer {
     @Step("saya mengirimkan request untuk membuat karir dengan menggunakan method Delete")
     public void mengirimkanRequestDenganMethodDelete() {
         String token = GenerateToken.generateTokenAdmin();
+<<<<<<< HEAD
+=======
+        requestBody.put("title_job", "Quality Engineer");
+        requestBody.put("company_name", "Google");
+        requestBody.put("location", "yogyakarta");
+        requestBody.put("size_company_employee", "1000");
+        requestBody.put("company_industry", "software development");
+        requestBody.put("required_skill", "programming languages");
+        requestBody.put("linkedin_url", "https://www.linkedin.com/company/google/job");
+        requestBody.put("about_job", "Create test case");
+        requestBody.put("about_company", "Lorem Ipsum");
+>>>>>>> 0d7cd88337049558e92133e24a3da83e79ce9364
         SerenityRest.given()
                 .contentType(ContentType.MULTIPART) // set to multipart/form-data
                 .header("Authorization", "Bearer " + token)
                 .multiPart("logo", new File("src/test/resources/Image/QA.jpeg"))
                 .multiPart("cover", new File("src/test/resources/Image/cover.jpeg"))
+<<<<<<< HEAD
                 .multiPart("title_job", "Quality Engineer")
                 .multiPart("company_name", "Google")
                 .multiPart("location", "yogyakarta")
@@ -169,6 +221,8 @@ public class CreateCareer {
                 .multiPart("linkedin_url", "https://www.linkedin.com/company/google/job")
                 .multiPart("about_job", "Create test case")
                 .multiPart("about_company", "Lorem Ipsum")
+=======
+>>>>>>> 0d7cd88337049558e92133e24a3da83e79ce9364
                 .delete(menetapkanApiEndpointUntukMembuatKarirBaru());
 }
 

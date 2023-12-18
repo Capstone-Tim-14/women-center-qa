@@ -14,6 +14,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class CreateRoleSteps {
 
+
     @Steps
     CreateRole createRole;
     @Given("saya menetapkan Api endpoint untuk membuat role baru")
@@ -24,6 +25,10 @@ public class CreateRoleSteps {
     @When("saya mengirimkan request untuk membuat role baru dengan menyisipkan data dan token")
     public void mengirimkanRequestUntukMembuatRoleBaruDenganMenyisipkanDataDanToken(){
         createRole.mengirimkanRequestUntukMembuatRoleBaruDenganMenyisipkanDataDanToken();
+    }
+    @Step("saya mengirimkan request untuk membuat role baru dengan menyisipkan data yang sudah tersimpan")
+    public void mengirimkanRequestUntukMembuatRoleBaruDenganMenyisipkanDataYangSudahTersimpan() {
+        createRole.mengirimkanRequestUntukMembuatRoleBaruDenganMenyisipkanDataYangSudahTersimpan();
     }
 
     @When("saya mengirimkan request untuk membuat role baru dengan mengosongkan data role")

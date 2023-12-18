@@ -1,4 +1,5 @@
 package starter.WebAdmin;
+import io.cucumber.java.en.When;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;
 import org.json.JSONObject;
@@ -23,6 +24,19 @@ public class Register{
         requestBody.put("username", "admin");
         requestBody.put("email", "adhitya@gmail.com");
         requestBody.put("password", "123123");
+        SerenityRest.given()
+                .header("Content-Type","application/json")
+                .body(requestBody.toString())
+                .post(menetapkanEndpointValid());
+    }
+    @Step("saya mengirimkan request dengan memasukan email valid namun password yang sangat pendek")
+    public void sayaMengirimkanRequestDenganMemasukanEmailValidNamunPasswordYangSangatPendek() {
+        JSONObject requestBody = new JSONObject();
+        requestBody.put("first_name", "admin");
+        requestBody.put("last_name", "ini");
+        requestBody.put("username", "admin");
+        requestBody.put("email", "aya@gmail.com");
+        requestBody.put("password", "1");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())

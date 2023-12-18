@@ -6,7 +6,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "status": {
+        "code": {
           "type": "integer"
         },
         "message": {
@@ -14,8 +14,8 @@
         }
       },
       "required": [
-        "message",
-        "status"
+        "code",
+        "message"
       ],
       "title": "Welcome"
     }

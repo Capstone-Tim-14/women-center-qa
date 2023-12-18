@@ -159,29 +159,6 @@ public class UpdateCounselor {
                 .delete(menetapkanApiEndpointUntukMengupdateDataKonselorDenganIdValid());
     }
 
-    @Step("saya menetapkan Api endpoint yang salah untuk mengupdate data konselor")
-    public String menetapkanApiEndpointYangSalahUntukMengupdateDataKonselor() {
-        return "/Counselors/4";
-    }
-
-    @Step("saya mengirimkan request untuk mengupdate data konselor dengan mengirimkan data lengkap seluruh field menggunakan endpoint yang salah")
-    public void mengirimkanRequestUntukMengupdateDataKonselorDenganmenetapkanApiEndpointYangSalah() {
-            String token = GenerateToken.generateTokenAdmin();
-            SerenityRest.given()
-                    .contentType(ContentType.MULTIPART) // set to multipart/form-data
-                    .header("Authorization", "Bearer " + token)
-                    .multiPart("first_name", "rizal")
-                    .multiPart("last_name", "sahala")
-                    .multiPart("email", "rizal@gmail.com")
-                    .multiPart("picture", new File("src/test/resources/Image/QA.jpeg"))
-                    .multiPart("phone_number", "0857")
-                    .multiPart("description", "konselor baru berpengalaman")
-                    .multiPart("username", "iniRizal")
-                    .multiPart("password", "admin123")
-                    .multiPart("education", "psikolog")
-                    .multiPart("birthday", "2002-11-10")
-                    .put(menetapkanApiEndpointYangSalahUntukMengupdateDataKonselor());
-        }
     @Step("saya menerima pesan data konselor berhasil diperbaharui")
     public void sayaMenerimaPesanDataKonselorBerhasilDiperbaharui () {
         restAssuredThat(response -> response.body("code", equalTo(200)));

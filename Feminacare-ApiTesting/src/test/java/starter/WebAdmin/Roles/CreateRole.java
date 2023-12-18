@@ -28,6 +28,17 @@ public class CreateRole {
                 .body(requestBody.toString())
                 .post(menetapkanApiEndpointUntukMembuatRoleBaru());
     }
+    @Step("saya mengirimkan request untuk membuat role baru dengan menyisipkan data yang sudah tersimpan")
+    public void mengirimkanRequestUntukMembuatRoleBaruDenganMenyisipkanDataYangSudahTersimpan(){
+        JSONObject requestBody = new JSONObject();
+        String token = GenerateToken.generateTokenAdmin();
+        requestBody.put("name", "konselor baru");
+        SerenityRest.given()
+                .header("Content-Type","application/json")
+                .header("Authorization", "Bearer " + token)
+                .body(requestBody.toString())
+                .post(menetapkanApiEndpointUntukMembuatRoleBaru());
+    }
 
     @Step("saya menerima data role yang berhasil ditambahkan")
     public void sayaMenerimaDataRoleYangBerhasilDitambahkan() {

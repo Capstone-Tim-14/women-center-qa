@@ -84,5 +84,11 @@ public class RegisterSteps{
         public void sayaMenerimaPesanErrorUnauthorized() {
             register.menerimaPesanUnauthorized();
         }
+
+
+        @When("saya mengirimkan request dengan memasukan email valid namun password yang sangat pendek")
+        public void sayaMengirimkanRequestDenganMemasukanEmailValidNamunPasswordYangSangatPendek() {
+            register.sayaMengirimkanRequestDenganMemasukanEmailValidNamunPasswordYangSangatPendek();
+        }
 }
 

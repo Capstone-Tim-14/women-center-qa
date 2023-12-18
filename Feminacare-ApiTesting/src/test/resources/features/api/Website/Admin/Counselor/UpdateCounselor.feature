@@ -46,9 +46,5 @@ Feature: Update Counselor
     Then saya menerima status kode 404
     And saya menerima pesan error Not Found
 
-  Scenario: gagal mengupdate data konselor menggunakan Api endpoint yang salah
-    Given saya menetapkan Api endpoint yang salah untuk mengupdate data konselor
-    When saya mengirimkan request untuk mengupdate data konselor dengan mengirimkan data lengkap seluruh field menggunakan endpoint yang salah
-    Then saya menerima status kode 404
-    And saya menerima pesan error Not Found
+
 

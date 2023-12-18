@@ -31,5 +31,17 @@ public class FileUtils {
         }
         return null;
     }
+    public static JSONObject getEndUser() {
+        try {
+            String filePath = "src/test/resources/sample/endUser.json";
+
+            String content = new String(Files.readAllBytes(Paths.get(filePath)));
+
+            return new JSONObject(content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
 

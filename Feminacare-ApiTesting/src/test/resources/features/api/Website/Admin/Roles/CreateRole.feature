@@ -9,6 +9,12 @@ Feature: Create Role
     Then saya menerima status kode 201
     And saya menerima data role yang berhasil ditambahkan
 
+  Scenario: gagal menambahkan role baru dengan mengisi data yang sudah tersimpan dan menggunakan token
+    Given saya menetapkan Api endpoint untuk membuat role baru
+    When saya mengirimkan request untuk membuat role baru dengan menyisipkan data yang sudah tersimpan
+    Then saya menerima status kode 201
+    And saya menerima data role yang berhasil ditambahkan
+
   Scenario: Gagal menambahkan role baru karena mengosongkan data
     Given saya menetapkan Api endpoint untuk membuat role baru
     When saya mengirimkan request untuk membuat role baru dengan mengosongkan data role

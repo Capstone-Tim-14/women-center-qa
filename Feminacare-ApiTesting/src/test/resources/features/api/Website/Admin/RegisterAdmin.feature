@@ -9,6 +9,12 @@ Feature: Register Admin
     Then saya menerima status kode 201
     And saya menerima data valid yang berhasil ditambahkan
 
+  Scenario: gagal melakukan registrasi dengan memasukan password yang sangat pendek
+    Given saya menetapkan API endpoint
+    When saya mengirimkan request dengan memasukan email valid namun password yang sangat pendek
+    Then saya menerima status kode 400
+    And saya menerima pesan error bad request
+
   Scenario: gagal melakukan registrasi karena mengosongkan request body
     Given saya menetapkan API endpoint
     When saya mengirimkan request dengan mengosongkan data

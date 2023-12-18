@@ -33,7 +33,7 @@ public class CreateSpecialist {
     @Step("saya menerima pesan sukses membuat spesialis baru")
     public void menampilkanPesanSuksesMembuatSpesialis() {
         JsonSchemaHelper helper = new JsonSchemaHelper();
-        String schema = helper.getResponseSchema(JsonSchema.MEMBUAT_DATA_BARU_SCHEMA);
+        String schema = helper.getResponseSchema(JsonSchema.CREATE_SPECIALIST);
         restAssuredThat(response -> response.body(matchesJsonSchema(schema)));
     }
     @Step("saya mengirimkan request untuk membuat spesialis baru dengan mengisi sebagian data")
@@ -41,7 +41,6 @@ public class CreateSpecialist {
         JSONObject requestBody = new JSONObject();
         String token = GenerateToken.generateTokenAdmin();
         requestBody.put("name", "Depresi");
-        requestBody.put("description", "Specialist tentang depresi");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .header("Authorization", "Bearer " + token)

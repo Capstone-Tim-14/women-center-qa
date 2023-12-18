@@ -41,14 +41,6 @@ public class UpdateCounselorSteps {
     public void mengirimkanRequestUntukmengupdateDataKonselorDenganMengirimkanDataLengkapSeluruhFieldMenggunakanMethodGet(){
         updateCounselor.mengirimkanRequestUntukmengupdateDataKonselorDenganMengirimkanDataLengkapSeluruhFieldMenggunakanMethodGet();
     }
-    @Given("saya menetapkan Api endpoint yang salah untuk mengupdate data konselor")
-    public void menetapkanApiEndpointYangSalahUntukMengupdateDataKonselor(){
-        updateCounselor.menetapkanApiEndpointYangSalahUntukMengupdateDataKonselor();
-    }
-    @When("saya mengirimkan request untuk mengupdate data konselor dengan mengirimkan data lengkap seluruh field menggunakan endpoint yang salah")
-    public void menetapkanApiEndpointYangSalahUntukMengupdateDataKonselorDenganIdValid(){
-        updateCounselor.mengirimkanRequestUntukMengupdateDataKonselorDenganmenetapkanApiEndpointYangSalah();
-    }
     @When("saya mengirimkan request untuk mengupdate data konselor dengan mengirimkan data lengkap seluruh field menggunakan method Delete")
     public void sayaMengirimkanRequestUntukMengupdateDataKonselorDenganMengirimkanDataLengkapSeluruhFieldMenggunakanMethodDelete() {
         updateCounselor.mengirimkanRequestUntukmengupdateDataKonselorDenganMengirimkanDataLengkapSeluruhFieldMenggunakanMethodDelete();

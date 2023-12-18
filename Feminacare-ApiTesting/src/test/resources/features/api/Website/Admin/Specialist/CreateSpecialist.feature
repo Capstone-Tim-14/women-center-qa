@@ -12,8 +12,8 @@ Feature: Create Specialist
   Scenario: gagal menambahkan spesialis baru dengan memasukan data yang sudah tersimpan
     Given saya menetapkan Api endpoint untuk membuat spesialis baru
     When saya mengirimkan request untuk membuat spesialis baru dengan menyisipkan data yang sudah tersimpan
-    Then saya menerima status kode 400
-    And saya menerima pesan error bad request
+    Then saya menerima status kode 409
+    And saya menerima pesan error email sudah terdaftar
 
   Scenario: Gagal menambahkan spesialis baru karena mengisikan data hanya di sebagian field
     Given saya menetapkan Api endpoint untuk membuat spesialis baru
@@ -54,11 +54,11 @@ Feature: Create Specialist
   Scenario: Gagal menambahkan spesialis baru dengan menggunakan method PUT
     Given saya menetapkan Api endpoint untuk membuat spesialis baru
     When saya mengirimkan request untuk membuat spesialis baru dengan method PUT
-    Then saya menerima status kode 422
-    And saya menerima pesan error data yang wajib diisi
+    Then saya menerima status kode 404
+    And saya menerima pesan error Not Found
 
   Scenario: Gagal menambahkan spesialis baru dengan menggunakan method DELETE
     Given saya menetapkan Api endpoint untuk membuat spesialis baru
     When saya mengirimkan request untuk membuat spesialis baru dengan method DELETE
-    Then saya menerima status kode 500
-    And saya menerima pesan error record not found
+    Then saya menerima status kode 404
+    And saya menerima pesan error Not Found

@@ -1,125 +1,73 @@
 {
-  "$schema": "http://json-schema.org/draft-06/schema#",
-  "$ref": "#/definitions/Welcome",
-  "definitions": {
-    "Welcome": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "code": {
-          "type": "integer"
-        },
-        "message": {
-          "type": "string"
-        },
-        "meta": {
-          "$ref": "#/definitions/Meta"
-        },
-        "data": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Datum"
-          }
-        }
+  "code": 200,
+  "message": "Success Get All Article",
+  "meta": {
+    "page": 1,
+    "limit": 5,
+    "total_page": 3,
+    "total_rows": 13,
+    "next_page": "https://www.api-ferminacare.tech//api/v1/admin/articles?page=2"
+  },
+  "data": [
+    {
+      "id": 6,
+      "title": "Our Digital Disillusionment and Hope Part 2",
+      "thumbnail": "https://pub-86c5755f32914550adb162dd2b8850d0.r2.dev/articles/thumbnail/b4ddfa70-c49f-42d6-9056-80d4cf638dfc",
+      "slug": "our-digital-disillusionment-and-hope-part-2",
+      "status": "PUBLISHED",
+      "author": {
+        "name": "admin adminA",
+        "role": "admin"
       },
-      "required": [
-        "code",
-        "data",
-        "message",
-        "meta"
-      ],
-      "title": "Welcome"
+      "published_at": "29 Nov 2023"
     },
-    "Datum": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "thumbnail": {
-          "type": "string"
-        },
-        "slug": {
-          "type": "string"
-        },
-        "status": {
-          "type": "string"
-        },
-        "author": {
-          "$ref": "#/definitions/Author"
-        },
-        "published_at": {
-          "type": "string"
-        }
+    {
+      "id": 7,
+      "title": "Cara Bangkit dari Kegagalan: Langkah Menuju Sukses Pribadi",
+      "thumbnail": "https://pub-86c5755f32914550adb162dd2b8850d0.r2.dev/articles/thumbnail/ad8fa7d3-6841-4f1b-94e6-9311b1721fb1",
+      "slug": "cara-bangkit-dari-kegagalan-langkah-menuju-sukses-pribadi",
+      "status": "REJECTED",
+      "author": {
+        "name": "admin adminA",
+        "role": "admin"
       },
-      "required": [
-        "author",
-        "published_at",
-        "slug",
-        "status",
-        "thumbnail",
-        "title"
-      ],
-      "title": "Datum"
+      "published_at": "29 Nov 2023"
     },
-    "Author": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "role": {
-          "type": "string"
-        }
+    {
+      "id": 8,
+      "title": "Cara Bangkit dari Kegagalan: Langkah Menuju Sukses Pribadi Jilid 2",
+      "thumbnail": "https://pub-86c5755f32914550adb162dd2b8850d0.r2.dev/articles/thumbnail/b7800cd0-de94-434b-9763-ae7f5d5eaa32",
+      "slug": "cara-bangkit-dari-kegagalan-langkah-menuju-sukses-pribadi-jilid-2",
+      "status": "PUBLISHED",
+      "author": {
+        "name": "admin adminA",
+        "role": "admin"
       },
-      "required": [
-        "name",
-        "role"
-      ],
-      "title": "Author"
+      "published_at": "29 Nov 2023"
     },
-    "Meta": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "page": {
-          "type": "integer"
-        },
-        "limit": {
-          "type": "integer"
-        },
-        "total_page": {
-          "type": "integer"
-        },
-        "total_rows": {
-          "type": "integer"
-        },
-        "next_page": {
-          "type": "string",
-          "format": "uri",
-          "qt-uri-protocols": [
-            "https"
-          ]
-        },
-        "previous_page": {
-          "type": "string",
-          "format": "uri",
-          "qt-uri-protocols": [
-            "https"
-          ]
-        }
+    {
+      "id": 9,
+      "title": "Pusat Wanita: Menara Dukungan dan Pemberdayaan",
+      "thumbnail": "https://pub-86c5755f32914550adb162dd2b8850d0.r2.dev/articles/thumbnail/89e60e39-f10c-4531-9c8a-feed4ace1ac9",
+      "slug": "pusat-wanita-menara-dukungan-dan-pemberdayaan",
+      "status": "PUBLISHED",
+      "author": {
+        "name": "admin baru",
+        "role": "admin"
       },
-      "required": [
-        "limit",
-        "next_page",
-        "page",
-        "previous_page",
-        "total_page",
-        "total_rows"
-      ],
-      "title": "Meta"
+      "published_at": "04 Dec 2023"
+    },
+    {
+      "id": 10,
+      "title": "Pusat Wanita: Membangun Masa Depan yang Terang",
+      "thumbnail": "https://pub-86c5755f32914550adb162dd2b8850d0.r2.dev/articles/thumbnail/26a4056e-689f-49ed-bd33-ae59ee9f8256",
+      "slug": "pusat-wanita-membangun-masa-depan-yang-terang",
+      "status": "REJECTED",
+      "author": {
+        "name": "admin baru",
+        "role": "admin"
+      },
+      "published_at": "04 Dec 2023"
     }
-  }
+  ]
 }

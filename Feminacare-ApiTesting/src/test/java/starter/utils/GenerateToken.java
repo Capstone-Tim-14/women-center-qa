@@ -37,4 +37,20 @@ public class GenerateToken {
         JSONObject loginResponseBody = new JSONObject(loginResponse.asString());
         return loginResponseBody.getJSONObject("data").get("token").toString();
     }
+    public static String generateTokenUser() {
+        JSONObject userData = FileUtils.getEndUser();
+        JSONObject requestBody = new JSONObject();
+
+        requestBody.put("email", userData.get("email"));
+        requestBody.put("password", userData.get("password"));
+
+        ResponseBody loginResponse = SerenityRest.given()
+                .header("Content-Type", "application/json")
+                .body(requestBody.toString())
+                .post("api-ferminacare.tech/api/v1/auth")
+                .body();
+
+        JSONObject loginResponseBody = new JSONObject(loginResponse.asString());
+        return loginResponseBody.getJSONObject("data").get("token").toString();
+    }
 }

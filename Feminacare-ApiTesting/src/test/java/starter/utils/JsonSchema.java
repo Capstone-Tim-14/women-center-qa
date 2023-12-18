@@ -12,10 +12,12 @@ public class JsonSchema {
     public static final String DATA_BARU_ROLE_SCHEMA = "schema/data_baru_role_schema.json";
     public static final String GET_ALL_TAGS_SCHEMA = "schema/get_all_tags_schema.json";
     public static final String MESSAGE_ERROR_500 = "schema/error_500_schema.json";
+    public static final String GET_ALL_ARTICLES_PAGE_SCHEMA = "schema/get_all_articles_page_schema.json";
     public static final String GET_ALL_ARTICLES_SCHEMA = "schema/get_all_articles_schema.json";
     public static final String GET_ALL_SPECIALIST_SCHEMA = "schema/get_all_specialist.json";
     public static final String GET_ALL_COUNSELORS_SCHEMA = "schema/get_all_counselors_schema.json";
     public static final String GET_ALL_CAREERS_SCHEMA = "schema/get_all_careers_schema.json";
     public static final String GET_DETAIL_CAREERS_SCHEMA = "schema/get_detail_careers_schema.json";
     public static final String MEMBUAT_DATA_BARU_SCHEMA = "schema/berhasil_membuat_data_baru_schema.json";
+    public static final String CREATE_SPECIALIST = "schema/create_specialist_schema.json";
 }

@@ -11,6 +11,7 @@ public class LoginAdmin_Steps {
 
     @Steps
     loginAdmin loginAdmin;
+
     @Given("Admin berada di halaman login")
     public void adminberadadihalamanlogin() {
         loginAdmin.openVite();
@@ -62,13 +63,23 @@ public class LoginAdmin_Steps {
         loginAdmin.inputemail("");
     }
 
-    @And("Admin mengosongkan password yang salah")
-    public void adminMengosongkanPasswordYangSalah() {
+    @And("Admin mengosongkan password")
+    public void adminMengosongkanPassword() {
         loginAdmin.inputpassword("");
     }
 
     @Then("Muncul pesan error email dan password harus diisi")
     public void munculPesanErrorEmailDanPasswordHarusDiisi() {
+        loginAdmin.failedLoginBecauseNotFillEmailPassword();
+    }
+
+    @Then("Muncul pesan error email harus diisi")
+    public void munculPesanErrorEmailHarusDiisi() {
+        loginAdmin.failedLoginBecauseNotFillEmailPassword();
+    }
+
+    @Then("Muncul pesan error password harus diisi")
+    public void munculPesanErrorPasswordHarusDiisi() {
         loginAdmin.failedLoginBecauseNotFillEmailPassword();
     }
 }

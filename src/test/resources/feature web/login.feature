@@ -25,6 +25,20 @@ Then Muncul pesan error password salah
 Scenario: Admin gagal Login karna mengosongkan email dan password
 Given Admin berada di halaman login
 When Admin mengosongkan email
-And Admin mengosongkan password yang salah
+And Admin mengosongkan password
 And Admin klik button login
 Then Muncul pesan error email dan password harus diisi
+
+Scenario: Admin gagal Login karna mengosongkan email
+Given Admin berada di halaman login
+When Admin mengosongkan email
+And Admin memasukkan password
+And Admin klik button login
+Then Muncul pesan error email harus diisi
+
+Scenario: Admin gagal Login karna mengosongkan password
+Given Admin berada di halaman login
+When Admin memasukkan email
+And Admin mengosongkan password
+And Admin klik button login
+Then Muncul pesan error password harus diisi

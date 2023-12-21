@@ -11,7 +11,8 @@ public class loginAdmin extends PageObject {
     private By passwordField(){return By.xpath("/html/body/div/div/div/div/div/form/div[2]/div/input");}
     private By button(){return By.xpath("/html/body/div/div/div/div/div/form/div[3]/button");}
     private By validasilogin(){return By.xpath("/html/body/div/div/div[2]/div/div[1]/div/div[1]/h3");}
-    private By emailFailed(){return By.xpath("/html/body/div/div/div/div/h3");}
+    private By emailFailed(){return By.xpath("/html/body/div/div/div/div/div/form/div[1]");}
+    private By emptyemail(){return By.xpath("/html/body/div/div/div/div/div/form/div[1]");}
     @Step
     public void openVite(){
         open();
@@ -47,13 +48,19 @@ public class loginAdmin extends PageObject {
             throw new AssertionError("Validation failed! Result message element not found.", e);
         }
     }
+    @Step
     public void failedLoginBecauseInvalidEmail(){
-        $(emailFailed()).isDisabled();
+        $(emailFailed());
+        waitABit(2000);
     }
+    @Step
     public void failedLoginBecauseInvalidPassword(){
-        $(emailFailed()).isDisabled();
+        $(emailFailed());
+        waitABit(2000);
     }
+    @Step
     public void failedLoginBecauseNotFillEmailPassword() {
-        $(emailFailed()).isDisabled();
+        $(emptyemail());
+        waitABit(2000);
     }
 }

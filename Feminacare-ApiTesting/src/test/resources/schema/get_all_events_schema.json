@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome",
+  "definitions": {
+    "Welcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "title": "Welcome"
+    },
+    "Datum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "locations": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "time_start": {
+          "type": "string",
+          "format": "time"
+        },
+        "time_finish": {
+          "type": "string",
+          "format": "time"
+        }
+      },
+      "required": [
+        "date",
+        "id",
+        "locations",
+        "time_finish",
+        "time_start",
+        "title"
+      ],
+      "title": "Datum"
+    }
+  }
+}

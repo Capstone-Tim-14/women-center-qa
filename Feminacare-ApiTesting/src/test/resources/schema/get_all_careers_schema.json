@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome",
+  "definitions": {
+    "Welcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "title": "Welcome"
+    },
+    "Datum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "title_job": {
+          "type": "string"
+        },
+        "logo": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ]
+        },
+        "company_name": {
+          "type": "string"
+        },
+        "published_at": {
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/definitions/Location"
+        },
+        "recomendation": {
+          "type": "string",
+          "format": "boolean"
+        }
+      },
+      "required": [
+        "company_name",
+        "id",
+        "location",
+        "logo",
+        "published_at",
+        "recomendation",
+        "title_job"
+      ],
+      "title": "Datum"
+    },
+    "Location": {
+      "type": "string",
+      "enum": [
+        "yogyakarta",
+        "Bali",
+        "West Jakarta",
+        "Jakarta, Indonesia",
+        "a",
+        "Jakarta"
+      ],
+      "title": "Location"
+    }
+  }
+}

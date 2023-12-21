@@ -8,7 +8,7 @@ public class GetDetailCareer {
     private String url ="https://api-ferminacare.tech/api/v1/admin/career";
     @Step("saya menetapkan API endpoint untuk mendapatkan detail karir dengan memasukan ID valid")
     public String menetapkanApiEndpointUntukmendapatkanDetailKarirDenganMemasukanIdValid(){
-        return url + "/2";
+        return url + "/23";
     }
     @Step("saya mengirimkan request untuk mendapatkan detail karir dengan menggunakan token")
     public void mengirimkanRequestUntukMendapatkanDetailKarirDenganMenggunakanToken(){

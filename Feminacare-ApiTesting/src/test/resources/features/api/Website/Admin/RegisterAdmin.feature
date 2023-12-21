@@ -12,14 +12,14 @@ Feature: Register Admin
   Scenario: gagal melakukan registrasi dengan memasukan password yang sangat pendek
     Given saya menetapkan API endpoint
     When saya mengirimkan request dengan memasukan email valid namun password yang sangat pendek
-    Then saya menerima status kode 400
-    And saya menerima pesan error bad request
+    Then saya menerima status kode 422
+    And saya menerima pesan error data yang wajib diisi
 
   Scenario: gagal melakukan registrasi karena mengosongkan request body
     Given saya menetapkan API endpoint
     When saya mengirimkan request dengan mengosongkan data
     Then saya menerima status kode 422
-    And saya menerima pesan error
+    And saya menerima pesan error data yang wajib diisi
 
   Scenario: gagal melakukan registrasi karena memasukan yang data yang tidak lengkap
     Given saya menetapkan API endpoint

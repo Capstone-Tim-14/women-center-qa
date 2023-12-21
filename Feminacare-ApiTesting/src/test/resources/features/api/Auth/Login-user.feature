@@ -22,7 +22,7 @@ Feature: Login user
     And saya mendapatkan pesan error data tidak valid
 
   Scenario: Gagal login dengan mengosongkan sebagian field
-    Given saya menetapkan API endpoint untuk melakukan login user
+    Given saya menetapkan API endpoint untuk login user
     When saya mengirimkan request untuk melakukan login dengan memasukan email namun mengosongkan password
     Then saya menerima status kode 422
     And saya menerima pesan error data yang wajib diisi

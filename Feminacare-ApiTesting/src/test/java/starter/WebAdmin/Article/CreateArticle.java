@@ -33,7 +33,6 @@ public class CreateArticle {
         String token = GenerateToken.generateTokenAdmin();
         SerenityRest.given()
                 .contentType(ContentType.MULTIPART)
-                .header("Authorization", "Bearer " + token)
                 .multiPart("thumbnail", new File("src/test/resources/Image/QA.jpeg"))
                 .multiPart("title", "Artikel Baru")
                 .header("Authorization", "Bearer " + token)
@@ -42,17 +41,17 @@ public class CreateArticle {
 
     @Step("saya mengirimkan request untuk membuat artikel dengan mengosongkan seluruh field data")
     public void mengirimkanRequestDataKosong() {
+        String token = GenerateToken.generateTokenAdmin();
         SerenityRest.given()
                 .contentType(ContentType.MULTIPART) // set to multipart/form-data
+                .header("Authorization", "Bearer " + token)
                 .post(menetapkanApiEndpointUntukMembuatArticleBaru());
     }
 
     @Step("saya mengirimkan request untuk membuat artikel tanpa menggunakan token")
     public void mengirimkanRequestTanpaToken() {
-        String token = GenerateToken.generateTokenAdmin();
         SerenityRest.given()
                 .contentType(ContentType.MULTIPART) // set to multipart/form-data
-                .header("Authorization", "Bearer " + token)
                 .multiPart("thumbnail", new File("src/test/resources/Image/QA.jpeg"))
                 .multiPart("title", "Artikel Baru")
                 .multiPart("content", "Lorem Ipsum")

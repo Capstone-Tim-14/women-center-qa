@@ -55,7 +55,7 @@ public class GetAllRoles {
 
     @Step("saya mendapatkan status kode 404")
     public void mendapatkanStatusKode404(){
-        restAssuredThat(response->response.statusCode(400));
+        restAssuredThat(response->response.statusCode(404));
     }
 
     @Step("saya menerima pesan error Not Found")

@@ -13,8 +13,8 @@ Feature: Delete career
   Scenario: Gagal menghapus karir berdasarkan ID tidak valid
     Given saya menetapkan Api Endpoint untuk menghapus karir berdasarkan ID invalid
     When saya mengirimkan request untuk menghapus karir berdasarkan ID invalid dengan menggunakan token
-    Then saya menerima status kode 500
-    And saya menerima pesan error record not found
+    Then saya menerima status kode 404
+    And saya menerima pesan error Not Found
 
   Scenario: Gagal menghapus karir karena tidak menggunakan ID
     Given saya menetapkan Api Endpoint untuk menghapus karir tanpa menggunakan ID
@@ -49,5 +49,5 @@ Feature: Delete career
   Scenario: Gagal menghapus karir berdasarkan ID karena menggunakan endpoint yang salah
     Given saya menetapkan Api Endpoint yang salah untuk menghapus karir berdasarkan ID valid
     When saya mengirimkan request untuk menghapus karir dengan endpoint yang salah
-    Then saya menerima status kode 500
-    And saya menerima pesan error record not found
+    Then saya mendapatkan status kode 404
+    And saya menerima pesan error Not Found

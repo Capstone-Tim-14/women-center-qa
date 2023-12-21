@@ -15,7 +15,7 @@ public class UpdateCareer {
 
     @Step("saya menetapkan Api endpoint untuk mengupdate data karir dengan ID valid")
     public String menetapkanApiEndpointUntukMengupdateDataKarirDenganIdValid() {
-        return url + "/career/23";
+        return url + "/career/24";
     }
 
     @Step("saya mengirimkan request untuk mengupdate data karir dengan mengirimkan data lengkap seluruh field menggunakan method Put")

@@ -26,7 +26,7 @@ public class CreateRoleSteps {
     public void mengirimkanRequestUntukMembuatRoleBaruDenganMenyisipkanDataDanToken(){
         createRole.mengirimkanRequestUntukMembuatRoleBaruDenganMenyisipkanDataDanToken();
     }
-    @Step("saya mengirimkan request untuk membuat role baru dengan menyisipkan data yang sudah tersimpan")
+    @When("saya mengirimkan request untuk membuat role baru dengan menyisipkan data yang sudah tersimpan")
     public void mengirimkanRequestUntukMembuatRoleBaruDenganMenyisipkanDataYangSudahTersimpan() {
         createRole.mengirimkanRequestUntukMembuatRoleBaruDenganMenyisipkanDataYangSudahTersimpan();
     }
@@ -64,4 +64,5 @@ public class CreateRoleSteps {
     public void sayaMengirimkanRequestUntukMembuatRoleBaruTanpaMenyisipkanDanToken() {
         createRole.sayaMengirimkanRequestUntukMembuatRoleBaruTanpaMenyisipkanDanToken();
     }
+
 }

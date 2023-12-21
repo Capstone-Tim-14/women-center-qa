@@ -7,11 +7,13 @@ Feature: Create Career
     Given saya menetapkan Api endpoint untuk membuat karir baru
     When saya mengirimkan request untuk membuat karir dengan mengisi data lengkap dan valid
     Then saya menerima status kode 201
+    And saya menerima pesan karir berhasil dibuat
 
   Scenario: gagal membuat karir baru karena memasukan data yang tidak lengkap
     Given saya menetapkan Api endpoint untuk membuat karir baru
     When saya mengirimkan request untuk membuat karir dengan mengisi data yang tidak lengkap
     Then saya menerima status kode 400
+
 
   Scenario: gagal membuat karir baru karena mengosongkan seluruh field data
     Given saya menetapkan Api endpoint untuk membuat karir baru

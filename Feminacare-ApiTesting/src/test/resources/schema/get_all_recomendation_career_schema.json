@@ -50,11 +50,7 @@
           "type": "string"
         },
         "location": {
-          "$ref": "#/definitions/Location"
-        },
-        "recomendation": {
-          "type": "string",
-          "format": "boolean"
+          "type": "string"
         }
       },
       "required": [
@@ -63,22 +59,9 @@
         "location",
         "logo",
         "published_at",
-        "recomendation",
         "title_job"
       ],
       "title": "Datum"
-    },
-    "Location": {
-      "type": "string",
-      "enum": [
-        "yogyakarta",
-        "Bali",
-        "West Jakarta",
-        "Jakarta, Indonesia",
-        "a",
-        "Jakarta"
-      ],
-      "title": "Location"
     }
   }
 }

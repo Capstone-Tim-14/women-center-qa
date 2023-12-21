@@ -62,4 +62,8 @@ public class CreateCareerSteps {
         createCareer.mengirimkanRequestDenganMethodDelete();
     }
 
+    @And("saya menerima pesan karir berhasil dibuat")
+    public void sayaMenerimaPesanKarirBerhasilDibuat() {
+        createCareer.sayaMenerimaPesanKarirBerhasilDibuat();
+    }
 }

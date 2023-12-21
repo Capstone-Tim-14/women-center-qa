@@ -16,8 +16,11 @@ public class JsonSchema {
     public static final String GET_ALL_ARTICLES_SCHEMA = "schema/get_all_articles_schema.json";
     public static final String GET_ALL_SPECIALIST_SCHEMA = "schema/get_all_specialist.json";
     public static final String GET_ALL_COUNSELORS_SCHEMA = "schema/get_all_counselors_schema.json";
+    public static final String GET_ALL_EVENTS_SCHEMA = "schema/get_all_events_schema.json";
+    public static final String GET_ALL_RECOMENDATION_SCHEMA = "schema/get_all_recomendation_career_schema.json";
     public static final String GET_ALL_CAREERS_SCHEMA = "schema/get_all_careers_schema.json";
     public static final String GET_DETAIL_CAREERS_SCHEMA = "schema/get_detail_careers_schema.json";
     public static final String MEMBUAT_DATA_BARU_SCHEMA = "schema/berhasil_membuat_data_baru_schema.json";
     public static final String CREATE_SPECIALIST = "schema/create_specialist_schema.json";
+    public static final String GET_DETAIL_EVENT_SCHEMA = "schema/get_detail_event_schema.json";
 }

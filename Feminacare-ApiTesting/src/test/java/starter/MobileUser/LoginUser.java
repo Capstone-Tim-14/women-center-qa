@@ -11,7 +11,11 @@ import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class LoginUser {
-    private static String url = "https://api-ferminacare.tech/api/v1/admin";
+
+       // "email":"agung123@gmail.com",
+       //     "password":"agung123"
+
+        private static String url = "https://api-ferminacare.tech/api/v1";
     @Step("saya menetapkan API endpoint untuk login user")
     public String menetapkanApiEndpointLoginUser(){
         return url + "/auth";
@@ -19,8 +23,8 @@ public class LoginUser {
     @Step("saya mengirimkan request untuk melakukan login dengan memasukan email dan password valid")
     public void mengirimkanRequestDenganMemasukanEmailDanPasswordValid(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "adminA@ferminacare.com");
-        requestBody.put("password", "admin123");
+        requestBody.put("email", "agung123@gmail.com");
+        requestBody.put("password", "agung123");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())
@@ -35,8 +39,8 @@ public class LoginUser {
     @Step("saya mengirimkan request untuk melakukan login dengan memasukan email dan password invalid")
     public void mengirimkanRequestDenganMemasukanEmailDanPasswordInvalid(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "BukanadminA@ferminacare.com");
-        requestBody.put("password", "Bukanadmin123");
+        requestBody.put("email", "Bukanagung123@gmail.com");
+        requestBody.put("password", "Bukanagung123");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())
@@ -50,8 +54,8 @@ public class LoginUser {
     @Step("saya mengirimkan request untuk melakukan login dengan memasukan email valid namun password invalid")
     public void mengirimkanRequestDenganMemasukanEmailValidNamunPasswordInvalid(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "adminA@ferminacare.com");
-        requestBody.put("password", "bukanadmin123");
+        requestBody.put("email", "agung123@gmail.com");
+        requestBody.put("password", "bukanagung123");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())
@@ -60,7 +64,7 @@ public class LoginUser {
     @Step("saya mengirimkan request untuk melakukan login dengan memasukan email namun mengosongkan password")
     public void mengirimkanRequestDenganMemasukanEmailNamunMengosongkanPassword(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "adminA@ferminacare.com");
+        requestBody.put("email", "agung123@gmail.com");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())
@@ -77,8 +81,8 @@ public class LoginUser {
     @Step("saya mengirimkan request untuk melakukan login dengan method GET dan memasukan data valid")
     public void mengirimkanRequestDenganMethodGETDanMemasukanDataValid(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "adminA@ferminacare.com");
-        requestBody.put("password", "admin123");
+        requestBody.put("email", "agung123@gmail.com");
+        requestBody.put("password", "agung123");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())
@@ -87,8 +91,8 @@ public class LoginUser {
     @Step("saya mengirimkan request untuk melakukan login dengan method PUT dan memasukan data valid")
     public void mengirimkanRequestDenganMethodPUTDanMemasukanDataValid(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "adminA@ferminacare.com");
-        requestBody.put("password", "admin123");
+        requestBody.put("email", "agung123@gmail.com");
+        requestBody.put("password", "agung123");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())
@@ -97,8 +101,8 @@ public class LoginUser {
     @Step("saya mengirimkan request untuk melakukan login dengan method DELETE dan memasukan data valid")
     public void mengirimkanRequestDenganMethodDeleteDanMemasukanDataValid(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "adminA@ferminacare.com");
-        requestBody.put("password", "admin123");
+        requestBody.put("email", "agung123@gmail.com");
+        requestBody.put("password", "agung123");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())
@@ -111,8 +115,8 @@ public class LoginUser {
     @Step("saya mengirimkan request untuk melakukan login ke endpoint yang salah dengan memasukan email dan password valid")
     public void mengirimkanRequestDenganEndpointSalahDanMemasukanEmailDanPasswordValid(){
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "adminA@ferminacare.com");
-        requestBody.put("password", "admin123");
+        requestBody.put("email", "agung123@gmail.com");
+        requestBody.put("password", "agung123");
         SerenityRest.given()
                 .header("Content-Type","application/json")
                 .body(requestBody.toString())

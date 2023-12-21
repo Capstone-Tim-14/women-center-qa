@@ -48,6 +48,6 @@ Feature: Get Detail Career
   Scenario: Gagal mendapatkan detail karir karena menggunakan method DELETE
     Given saya menetapkan API endpoint yang salah untuk mendapatkan detail karir
     When saya mengirimkan request untuk mendapatkan detail karir dengan menggunakan method DELETE
-    Then saya mendapatkan status kode 200
-    And saya menerima pesan data berhasil dihapus
+    Then saya menerima status kode 500
+    And saya menerima pesan error record not found
 

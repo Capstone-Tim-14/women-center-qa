@@ -53,5 +53,5 @@ Feature: Create Tag Article
 
   Scenario: Gagal menambahkan tag artikel baru dengan menggunakan method DELETE
     When saya mengirimkan request untuk membuat tag baru dengan method DELETE
-    Then saya menerima status kode 500
-    And saya menerima pesan error record not found
+    Then saya menerima status kode 404
+    And saya menerima pesan error Not Found

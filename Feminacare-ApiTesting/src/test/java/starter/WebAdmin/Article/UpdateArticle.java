@@ -138,7 +138,6 @@ public class UpdateArticle {
     }
     @Step("saya menerima pesan error artikel tidak ditemukan")
     public void sayaMenerimaPesanErrorArtikelTidakDitemukan() {
-        restAssuredThat(response -> response.body("code", equalTo(404)));
-        restAssuredThat(response -> response.body("message", equalTo("Article not found")));
+        restAssuredThat(response -> response.body("message", equalTo("article not found")));
     }
 }

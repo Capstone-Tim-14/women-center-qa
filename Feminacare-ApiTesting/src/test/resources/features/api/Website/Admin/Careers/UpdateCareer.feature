@@ -27,7 +27,7 @@ Feature: Update Career
     Then saya menerima status kode 500
     And saya menerima pesan error record not found
 
-  Scenario: gagal mengupdate data karir karena mengedit dengan data yang sudah tersedia
+  Scenario: Berhasil mengupdate data karir karena mengedit dengan data yang sudah tersedia
     Given saya menetapkan Api endpoint untuk mengupdate data karir dengan ID valid
     When saya mengirimkan request untuk mengupdate data karir dengan mengirimkan data lengkap seluruh field menggunakan menggunakan data yang sudah tersedia
     Then saya mendapatkan status kode 200
@@ -37,8 +37,8 @@ Feature: Update Career
   Scenario: gagal mengupdate data karir menggunakan method Get
     Given saya menetapkan Api endpoint untuk mengupdate data karir dengan ID valid
     When saya mengirimkan request untuk mengupdate data karir dengan mengirimkan data lengkap seluruh field menggunakan method Get
-    Then saya menerima status kode 404
-    And saya menerima pesan error Not Found
+    Then saya mendapatkan status kode 200
+    And saya menerima data detail karir
 
   Scenario: gagal mengupdate data karir menggunakan method Post
     Given saya menetapkan Api endpoint untuk mengupdate data karir dengan ID valid

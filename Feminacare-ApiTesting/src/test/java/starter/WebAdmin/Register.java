@@ -29,6 +29,19 @@ public class Register{
                 .body(requestBody.toString())
                 .post(menetapkanEndpointValid());
     }
+    @Step("saya mengirimkan request dengan memasukan email valid namun password tanpa kombinasi karakter")
+    public void sayaMengirimkanRequestDenganMemasukanEmailValidNamunPasswordTanpaKombinasiKarakter() {
+        JSONObject requestBody = new JSONObject();
+        requestBody.put("first_name", "admin5");
+        requestBody.put("last_name", "baru");
+        requestBody.put("username", "admin5");
+        requestBody.put("email", "viviAis@gmail.com");
+        requestBody.put("password", "string");
+        SerenityRest.given()
+                .header("Content-Type","application/json")
+                .body(requestBody.toString())
+                .post(menetapkanEndpointValid());
+    }
     @Step("saya mengirimkan request dengan memasukan email valid namun password yang sangat pendek")
     public void sayaMengirimkanRequestDenganMemasukanEmailValidNamunPasswordYangSangatPendek() {
         JSONObject requestBody = new JSONObject();

@@ -66,4 +66,5 @@ public class CreateCareerSteps {
     public void sayaMenerimaPesanKarirBerhasilDibuat() {
         createCareer.sayaMenerimaPesanKarirBerhasilDibuat();
     }
+
 }

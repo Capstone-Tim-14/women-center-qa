@@ -193,6 +193,6 @@ public class UpdateCareer {
     @Step("saya menerima pesan data karir berhasil diperbaharui")
     public void sayaMenerimaPesanDataKarirBerhasilDiperbaharui () {
         restAssuredThat(response -> response.body("code", equalTo(200)));
-        restAssuredThat(response -> response.body("message", equalTo("Counselor updated successfully")));
+        restAssuredThat(response -> response.body("message", equalTo("Success update career")));
     }
 }

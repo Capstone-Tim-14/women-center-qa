@@ -23,4 +23,5 @@ public class JsonSchema {
     public static final String MEMBUAT_DATA_BARU_SCHEMA = "schema/berhasil_membuat_data_baru_schema.json";
     public static final String CREATE_SPECIALIST = "schema/create_specialist_schema.json";
     public static final String GET_DETAIL_EVENT_SCHEMA = "schema/get_detail_event_schema.json";
+    public static final String GET_LIST_COUNSELING_SCHEMA = "schema/get_list_counseling_session.json";
 }

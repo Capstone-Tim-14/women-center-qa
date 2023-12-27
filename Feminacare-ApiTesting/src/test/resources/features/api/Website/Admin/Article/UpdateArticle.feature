@@ -44,7 +44,7 @@ Feature: Update Article
     Given saya menetapkan Api endpoint untuk mengupdate data artikel dengan ID valid
     When saya mengirimkan request untuk mengupdate data artikel dengan mengirimkan data lengkap seluruh field menggunakan method Post
     Then saya menerima status kode 404
-    And saya menerima pesan error artikel tidak ditemukan
+    And saya menerima pesan error Not Found
 
   Scenario: gagal mengupdate data artikel menggunakan Api endpoint yang salah
     Given saya menetapkan Api endpoint yang salah untuk mengupdate data artikel

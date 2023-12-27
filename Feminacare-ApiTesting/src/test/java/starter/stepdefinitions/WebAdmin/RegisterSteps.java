@@ -90,5 +90,10 @@ public class RegisterSteps{
         public void sayaMengirimkanRequestDenganMemasukanEmailValidNamunPasswordYangSangatPendek() {
             register.sayaMengirimkanRequestDenganMemasukanEmailValidNamunPasswordYangSangatPendek();
         }
+
+    @When("saya mengirimkan request dengan memasukan email valid namun password tanpa kombinasi karakter")
+    public void sayaMengirimkanRequestDenganMemasukanEmailValidNamunPasswordTanpaKombinasiKarakter() {
+            register.sayaMengirimkanRequestDenganMemasukanEmailValidNamunPasswordTanpaKombinasiKarakter();
+    }
 }
 

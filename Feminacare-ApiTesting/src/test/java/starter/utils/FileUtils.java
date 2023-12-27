@@ -21,7 +21,7 @@ public class FileUtils {
     }
     public static JSONObject getUserKonselor() {
         try {
-            String filePath = "src/test/resources/sample/userAdmin.json";
+            String filePath = "src/test/resources/sample/userKonselor.json";
 
             String content = new String(Files.readAllBytes(Paths.get(filePath)));
 

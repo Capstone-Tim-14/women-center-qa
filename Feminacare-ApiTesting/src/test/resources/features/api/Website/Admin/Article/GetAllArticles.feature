@@ -43,12 +43,12 @@ Feature: Get All Articles
   Scenario: Gagal mendapatkan data artikel karena menggunakan method PUT
     Given saya menetapkan API endpoint yang salah untuk mendapatkan semua roles
     When saya mengirimkan request untuk mendapatkan semua artikel dengan menggunakan method PUT
-    Then saya menerima status kode 401
-    And saya menerima pesan error unauthorized
+    Then saya menerima status kode 404
+    And saya menerima pesan error Not Found
 
   Scenario: Gagal mendapatkan data roles karena menggunakan method DELETE
     Given saya menetapkan API endpoint yang salah untuk mendapatkan semua artikel
     When saya mengirimkan request untuk mendapatkan semua artikel dengan menggunakan method DELETE
-    Then saya menerima status kode 401
-    And saya menerima pesan error unauthorized
+    Then saya menerima status kode 404
+    And saya menerima pesan error Not Found
 

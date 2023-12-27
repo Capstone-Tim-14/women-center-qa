@@ -22,7 +22,7 @@ public class GenerateToken {
         return loginResponseBody.getJSONObject("data").get("token").toString();
     }
     public static String generateTokenKonselor() {
-        JSONObject userData = FileUtils.getUserAdmin();
+        JSONObject userData = FileUtils.getUserKonselor();
         JSONObject requestBody = new JSONObject();
 
         requestBody.put("email", userData.get("email"));
@@ -31,7 +31,7 @@ public class GenerateToken {
         ResponseBody loginResponse = SerenityRest.given()
                 .header("Content-Type", "application/json")
                 .body(requestBody.toString())
-                .post("api-ferminacare.tech/api/v1/auth")
+                .post("https://api-ferminacare.tech/api/v1/auth")
                 .body();
 
         JSONObject loginResponseBody = new JSONObject(loginResponse.asString());
@@ -47,7 +47,7 @@ public class GenerateToken {
         ResponseBody loginResponse = SerenityRest.given()
                 .header("Content-Type", "application/json")
                 .body(requestBody.toString())
-                .post("api-ferminacare.tech/api/v1/auth")
+                .post("https://api-ferminacare.tech/api/v1/auth")
                 .body();
 
         JSONObject loginResponseBody = new JSONObject(loginResponse.asString());

@@ -18,7 +18,7 @@ public class GetAllCareers {
     }
     @Step("saya menetapkan API endpoint untuk mendapatkan semua karir dengan sebuah ID")
     public String menetapkanApiEndpointUntukMendapatkanSemuaKarirDenganSebuahID(){
-        return url + "/career/23";
+        return url + "/career/24";
     }
     @Step("saya menerima data detail karir")
     public void menerimaDetailKarir(){

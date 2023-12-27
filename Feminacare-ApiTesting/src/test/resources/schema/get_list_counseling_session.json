@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Welcome",
+  "definitions": {
+    "Welcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "title": "Welcome"
+    },
+    "Datum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "booking_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "user_id": {
+          "type": "string",
+          "format": "integer"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "package": {
+          "type": "string"
+        },
+        "date_schedule": {
+          "type": "string"
+        },
+        "time_start": {
+          "type": "string",
+          "format": "time"
+        },
+        "time_finish": {
+          "type": "string",
+          "format": "time"
+        }
+      },
+      "required": [
+        "booking_id",
+        "date_schedule",
+        "fullname",
+        "package",
+        "time_finish",
+        "time_start",
+        "user_id"
+      ],
+      "title": "Datum"
+    }
+  }
+}

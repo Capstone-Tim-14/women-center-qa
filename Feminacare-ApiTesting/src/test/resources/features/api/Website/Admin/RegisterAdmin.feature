@@ -15,6 +15,12 @@ Feature: Register Admin
     Then saya menerima status kode 422
     And saya menerima pesan error data yang wajib diisi
 
+  Scenario: gagal melakukan registrasi dengan memasukan password tanpa kombinasi karakter
+    Given saya menetapkan API endpoint
+    When saya mengirimkan request dengan memasukan email valid namun password tanpa kombinasi karakter
+    Then saya menerima status kode 400
+    And saya menerima pesan error bad request
+
   Scenario: gagal melakukan registrasi karena mengosongkan request body
     Given saya menetapkan API endpoint
     When saya mengirimkan request dengan mengosongkan data

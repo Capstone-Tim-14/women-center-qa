@@ -34,7 +34,7 @@
           "type": "integer"
         },
         "title_job": {
-          "type": "string"
+          "$ref": "#/definitions/TitleJob"
         },
         "logo": {
           "type": "string",
@@ -44,7 +44,7 @@
           ]
         },
         "company_name": {
-          "type": "string"
+          "$ref": "#/definitions/CompanyName"
         },
         "published_at": {
           "type": "string"
@@ -68,17 +68,46 @@
       ],
       "title": "Datum"
     },
+    "CompanyName": {
+      "type": "string",
+      "enum": [
+        "Google",
+        "PT Nusantara Compnet Integrator (Compnet)",
+        "INDODAX - Indonesia Digital Asset Exchange",
+        "INDODAX",
+        "Alterra",
+        "karir",
+        "Build",
+        "PT Bonofactum"
+      ],
+      "title": "CompanyName"
+    },
     "Location": {
       "type": "string",
       "enum": [
         "yogyakarta",
-        "Bali",
         "West Jakarta",
         "Jakarta, Indonesia",
         "a",
-        "Jakarta"
+        "Jakarta",
+        "Bali, Indonesia"
       ],
       "title": "Location"
+    },
+    "TitleJob": {
+      "type": "string",
+      "enum": [
+        "Quality Engineer",
+        "Presales Supervisor",
+        "Mandarin Mentor",
+        "Karir",
+        "Test",
+        "Karier",
+        "Testimoni",
+        "test",
+        "Junior PHP"
+      ],
+      "title": "TitleJob"
     }
   }
 }
